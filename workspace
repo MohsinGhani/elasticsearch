@@ -1,0 +1,33 @@
+PUT facetone
+{
+  "mappings": {
+    "workspace" : {
+      "properties" : {
+        "id" : {
+          "type"  : "text"
+        },
+        "creator" : {
+          "type"  : "text"
+        },
+        "name" : {
+          "type"  : "text"
+        },
+        "type" : {
+          "type"  : "text"
+        },
+        "created_date" : {
+          "type"  : "text"
+        },
+        "description" : {
+          "type"  : "text"
+        },
+        "owner_id" : {
+          "type"  : "text"
+        },
+        "purpose" : {
+          "type"  : "text"
+        }
+      }
+    }
+  }
+}
