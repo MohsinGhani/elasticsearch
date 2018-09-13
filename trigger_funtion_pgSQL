@@ -9,3 +9,8 @@ RETURN NEW;
 END;
 $BODY$
 LANGUAGE plpgsql;
+
+CREATE TRIGGER update_elastic
+BEFORE UPDATE ON public."Folder_and_File"
+FOR EACH ROW
+EXECUTE PROCEDURE update_file_folder();
