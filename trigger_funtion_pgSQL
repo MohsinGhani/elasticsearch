@@ -1,0 +1,11 @@
+CREATE OR REPLACE FUNCTION update_file_folder()
+RETURNS TRIGGER AS
+$BODY$
+BEGIN
+IF NEW.name<>OLD.name THEN
+	SELECT http_post('https://nonchalant-soprano.glitch.me/post','{"name":"Mohsin Ghani"}');
+END IF;
+RETURN NEW;
+END;
+$BODY$
+LANGUAGE plpgsql;
